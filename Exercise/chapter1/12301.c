@@ -97,7 +97,7 @@ main(void)
 
     if (state == SLASH)
         putchar('/' //**/
-                1);
+		1);
 
     return 0;
 }

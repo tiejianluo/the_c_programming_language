@@ -29,33 +29,33 @@ main()
     {
       t=0;
       while(t < len)
-	{
-	  if( line[t] == '[')
-	    {
-	      brace++;
-	    }
-	  if( line[t] == ']')
-	    {
-	      brace--;
-	    }
-	  if( line[t] == '(')
-	    {
-	      parenthesis++;
-	    }
-	  if( line[t] == ')')
-	    {
-	      parenthesis--;
-	    }
-	  if( line[t] == '\'')
-	    {
-	      s_quote *= -1;
-	    }
-	  if( line[t] == '"')
-	    {
-	      d_quote *= -1;
-	    }
-	  t++;
-	}
+		{
+		  if( line[t] == '[')
+		    {
+		      brace++;
+		    }
+		  if( line[t] == ']')
+		    {
+		      brace--;
+		    }
+		  if( line[t] == '(')
+		    {
+		      parenthesis++;
+		    }
+		  if( line[t] == ')')
+		    {
+		      parenthesis--;
+		    }
+		  if( line[t] == '\'')
+		    {
+		      s_quote *= -1;
+		    }
+		  if( line[t] == '"')
+		    {
+		      d_quote *= -1;
+		    }
+		  t++;
+		}
     }
   if(d_quote !=1)
     printf ("Mismatching double quote mark\n");

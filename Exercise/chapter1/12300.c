@@ -14,8 +14,7 @@ char line[MAXLINE]; /*current input line*/
 int getline(void);  /* taken from the KnR book. */
 
 
-int
-main()
+int main()
 {
   int in_comment,len;
   int in_quote;
@@ -27,36 +26,36 @@ main()
       t=0;
       while(t < len)
         {
-	  if( line[t] == '"')
-		in_quote = 1;
-
-	  if( ! in_quote )
-	  {
-          	if( line[t] == '/' && line[t+1] == '*')
-            	{
-              		t=t+2;
-              		in_comment = 1;
-            	}
-          	if( line[t] == '*' && line[t+1] == '/')
-            	{
-              		t=t+2;
-              		in_comment = 0;
-            	}
-          	if(in_comment == 1)
-           	 {
-              		t++;
-            	}
-          	else
-            	{
-              		printf ("%c", line[t]);
-              		t++;
-            	}
-	  } 
-	  else
-	  {
-              printf ("%c", line[t]);
-              t++;
-	  }
+		  if( line[t] == '"')
+			in_quote = 1;
+	
+		  if( ! in_quote )
+		  {
+	          	if( line[t] == '/' && line[t+1] == '*')
+	            	{
+	              		t=t+2;
+	              		in_comment = 1;
+	            	}
+	          	if( line[t] == '*' && line[t+1] == '/')
+	            	{
+	              		t=t+2;
+	              		in_comment = 0;
+	            	}
+	          	if(in_comment == 1)
+	           	 {
+	              		t++;
+	            	}
+	          	else
+	            	{
+	              		printf ("%c", line[t]);
+	              		t++;
+	            	}
+		  } 
+		  else
+		  {
+	              printf ("%c", line[t]);
+	              t++;
+		  }
         }
     }
   return 0;
