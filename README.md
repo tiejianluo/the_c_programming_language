@@ -1,1 +1,1 @@
-da
+这是the_c_programming_language一书中的习题，其中example目录是书中每章每个小节的书中示例；exercise目录下是每一章的习题；目录下的所以*.c文件可以根据相应文件名找到对应书中章节。
